@@ -1,0 +1,19 @@
+type User {
+  id: ID! @id
+  name: String!
+  email: String! @unique
+  following: [User!]! @relation(name: "FollowRelation")
+  followers: [User!]! @relation(name: "FollowRelation")
+  notes: [Note!]! @relation(name:"NoteOfUser", onDelete:CASCADE)
+  createdAt: DateTime @createdAt
+  updatedAt: DateTime @updatedAt
+}
+
+type Note {
+  id: ID! @id
+  title: String!
+  content: String!
+  user: User  @relation(name:"NoteOfUser")
+  createdAt: DateTime @createdAt
+  updatedAt: DateTime @updatedAt
+}
