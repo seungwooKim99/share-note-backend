@@ -5,7 +5,9 @@ type User {
   password: String!
   following: [User!]! 
   followers: [User!]! 
-  notes: [Note!]! 
+  notes: [Note!]!
+  isFollowRequested: Boolean!
+  isSelf: Boolean!
   createdAt: String
   updatedAt: String
 }

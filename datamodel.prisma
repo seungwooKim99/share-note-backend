@@ -6,6 +6,7 @@ type User {
   following: [User!]! @relation(name: "FollowRelation")
   followers: [User!]! @relation(name: "FollowRelation")
   notes: [Note!]! @relation(name:"NoteOfUser", onDelete:CASCADE)
+  isFollowRequested: Boolean!
   createdAt: DateTime @createdAt
   updatedAt: DateTime @updatedAt
 }

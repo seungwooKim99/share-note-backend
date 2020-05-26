@@ -10,7 +10,7 @@ export default {
                 throw Error("This email is already taken");
             }
             await prisma.createUser({
-                name, email, password: hash(password)
+                name, email, password: hash(password), isFollowRequested: false
             });
             return true;
         }
