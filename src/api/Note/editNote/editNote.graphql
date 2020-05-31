@@ -1,0 +1,8 @@
+enum ACTIONS {
+    EDIT
+    DELETE
+}
+
+type Mutation {
+    editNote(id: String! title: String content: String action: ACTIONS!): Note
+}

@@ -12,8 +12,9 @@ Share Note service with Express, Prisma and React (Backend)
 - [x] Request follow
 - [x] Confirm follow
 - [x] Discard follow request
-- [ ] Create note
-- [ ] Edit note (Delete)
+- [x] Create note
+- [x] Edit note (Delete)
 - [ ] See the notes
+- [x] Share the note
 
 ref: "https://backend-intro.vlpt.us/3/"

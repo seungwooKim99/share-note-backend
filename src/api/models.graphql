@@ -17,6 +17,7 @@ type Note {
   title: String!
   content: String!
   user: User!
+  isShared: Boolean!
   createdAt: String
   updatedAt: String
 }

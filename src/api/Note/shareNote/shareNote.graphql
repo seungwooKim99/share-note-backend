@@ -1,0 +1,3 @@
+type Mutation {
+    shareNote(id: String!): Boolean!
+}

@@ -16,6 +16,7 @@ type Note {
   title: String!
   content: String!
   user: User  @relation(name:"NoteOfUser")
+  isShared: Boolean!
   createdAt: DateTime @createdAt
   updatedAt: DateTime @updatedAt
 }
