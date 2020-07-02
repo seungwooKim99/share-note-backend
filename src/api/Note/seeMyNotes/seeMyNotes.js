@@ -3,16 +3,14 @@ import { prisma } from "../../../../generated/prisma-client";
 
 export default {
     Query: {
-        seeFeed: async (_, __, { request }) => {
+        seeMyNotes: async (_, __, { request }) => {
             isAuthenticated(request);
             const { user } = request;
-            const following = await prisma.user({ id: user.id }).following();
             return prisma.notes({
                 where: {
                     user: {
-                        id_in: [...following.map(user => user.id), user.id]
-                    },
-                    isShared: true
+                        id_in: user.id
+                    }
                 },
                 orderBy: "createdAt_DESC"
             });

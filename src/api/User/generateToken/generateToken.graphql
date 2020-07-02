@@ -1,3 +1,3 @@
-type Query {
-    generateToken(id: String!): String!
+type Mutation {
+    generateToken(email: String! password: String!): String!
 }
