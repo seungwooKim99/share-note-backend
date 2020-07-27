@@ -1,7 +1,7 @@
 import { prisma } from "../../../../generated/prisma-client";
 
 export default {
-    Query: {
+    Mutation: {
         searchUser: async (_, args, { request }) => {
             const { email } = args;
             return prisma.user({ email });

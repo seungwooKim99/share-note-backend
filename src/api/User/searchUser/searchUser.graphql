@@ -1,3 +1,3 @@
-type Query {
-    searchUser(email: String!): User!
+type Mutation {
+    searchUser(email: String!): User
 }

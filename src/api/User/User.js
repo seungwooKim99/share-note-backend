@@ -7,7 +7,6 @@ export default {
             let count = await prisma.usersConnection({ where: { following_some: { id: user.id } } })
                 .aggregate()
                 .count();
-            console.log(count);
             if (count !== 1) {
                 return false;
             }
