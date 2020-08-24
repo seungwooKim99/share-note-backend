@@ -9,6 +9,7 @@ type User {
   isFollowRequested: Boolean!
   isSelf: Boolean!
   isMatched: Boolean!
+  isSent: Boolean!
   createdAt: String
   updatedAt: String
 }
